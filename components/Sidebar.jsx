@@ -1,6 +1,6 @@
 import React from "react";
-
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 import { SiStarlingbank } from "react-icons/si";
 import {
@@ -22,6 +22,9 @@ function Sidebar({ setIsSidebarOpen }) {
     { name: "Activity", url: "/user/Activity", icon: <RiHistoryLine /> },
     { name: "Analytics", url: "/user/Analytics", icon: <MdOutlineAnalytics /> },
   ];
+
+  const router = useRouter();
+  console.log(router);
   return (
     <div className="fixed lg:sticky top-0 bottom-0 z-30 w-80 h-screen px-4 border-r bg-white transition ease-in-out delay-150  ">
       <div>
@@ -40,7 +43,14 @@ function Sidebar({ setIsSidebarOpen }) {
         <div className="py-8">
           {Pages.map((page, index) => (
             <Link key={index} href={page.url}>
-              <div className="flex items-center gap-4 my-2 py-2 px-6 w-full rounded-xl text-left text-gray-600 font-semibold cursor-pointer hover:bg-gray-100">
+              <div
+                className={
+                  "flex items-center gap-4 my-2 py-2 px-6 w-full rounded-xl text-left  font-semibold cursor-pointer animation duration-200 ease-in-out " +
+                  (router.pathname === page.url
+                    ? " bg-blue-600 text-white"
+                    : " text-gray-600 hover:bg-gray-100")
+                }
+              >
                 <div className="text-xl">{page.icon}</div>
                 {page.name}
               </div>
