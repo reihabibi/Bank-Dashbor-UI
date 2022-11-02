@@ -15,16 +15,15 @@ import { FiSettings, FiHelpCircle } from "react-icons/fi";
 
 function Sidebar({ setIsSidebarOpen }) {
   const Pages = [
-    { name: "Dashboard", url: "/user/Dashboard", icon: <RiHome5Line /> },
-    { name: "Invoce", url: "/user/Invoce", icon: <TbFileInvoice /> },
-    { name: "Messages", url: "/user/Messages", icon: <RiMessage2Line /> },
-    { name: "My Wallet", url: "/user/MyWallet", icon: <RiWalletLine /> },
-    { name: "Activity", url: "/user/Activity", icon: <RiHistoryLine /> },
-    { name: "Analytics", url: "/user/Analytics", icon: <MdOutlineAnalytics /> },
+    { name: "Dashboard", url: "/user/dashboard", icon: <RiHome5Line /> },
+    { name: "Invoce", url: "/user/invoce", icon: <TbFileInvoice /> },
+    { name: "Messages", url: "/user/messages", icon: <RiMessage2Line /> },
+    { name: "My Wallet", url: "/user/myWallet", icon: <RiWalletLine /> },
+    { name: "Activity", url: "/user/activity", icon: <RiHistoryLine /> },
+    { name: "Analytics", url: "/user/analytics", icon: <MdOutlineAnalytics /> },
   ];
 
   const router = useRouter();
-  console.log(router);
   return (
     <div className="fixed lg:sticky top-0 bottom-0 z-30 w-80 h-screen px-4 border-r bg-white transition ease-in-out delay-150  ">
       <div>

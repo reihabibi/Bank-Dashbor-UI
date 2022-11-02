@@ -10,15 +10,19 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="w-full h-64 flex flex-col items-center justify-end">
-        <h1 className="text-3xl text-blue-700 font-bold">Home Page</h1>
-        <div className="mt-4 flex gap-4 font-semibold">
+        <h1 className="text-4xl text-blue-700 font-bold">Home Page</h1>
+        <h1 className="mt-2 text-sm text-gray-500 font-bold">
+          Home Page UI is not available yet!{" "}
+        </h1>
+
+        <div className="mt-24 flex gap-10 text-xl font-semibold">
           <Link href="/Login">
             <h1 className="hover:text-blue-600 cursor-pointer">Log In</h1>
           </Link>
           <Link href="/Signup">
             <h1 className="hover:text-blue-600 cursor-pointer">Sign Up</h1>
           </Link>
-          <Link href="/user/Dashboard">
+          <Link href="/user/dashboard">
             <h1 className="hover:text-blue-600 cursor-pointer">
               User Dashboard
             </h1>
